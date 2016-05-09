@@ -1,0 +1,104 @@
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\ApplicationInsights.config
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\roslyn\csc.exe
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\roslyn\vbc.exe
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\roslyn\VBCSCompiler.exe
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\Statki.dll.config
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\Statki.dll
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\Statki.pdb
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\AutoMapper.dll
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\EntityFramework.dll
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\EntityFramework.SqlServer.dll
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\Microsoft.AI.Web.dll
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\Microsoft.ApplicationInsights.dll
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\System.Web.Helpers.dll
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\System.Web.Mvc.dll
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\System.Web.Razor.dll
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\System.Web.Webpages.Deployment.dll
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\System.Web.Webpages.dll
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\System.Web.Webpages.Razor.dll
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\AutoMapper.xml
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\EntityFramework.xml
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\EntityFramework.SqlServer.xml
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\Microsoft.AI.Web.xml
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\Microsoft.ApplicationInsights.xml
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\System.Web.Razor.xml
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\System.Web.Webpages.xml
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\System.Web.Webpages.Deployment.xml
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\System.Web.Webpages.Razor.xml
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\System.Web.Helpers.xml
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\bin\System.Web.Mvc.xml
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\obj\Debug\Statki.dll
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\obj\Debug\Statki.pdb
+C:\Users\hpereverzieva\documents\visual studio 2015\Projects\Statki\Statki\obj\Debug\Statki.csprojResolveAssemblyReference.cache
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\ApplicationInsights.config
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\roslyn\csc.exe
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\roslyn\System.Collections.Immutable.dll
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\roslyn\System.Reflection.Metadata.dll
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\roslyn\vbc.exe
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\roslyn\VBCSCompiler.exe
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\roslyn\VBCSCompiler.exe.config
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\Statki.dll.config
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\Statki.dll
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\Statki.pdb
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\AutoMapper.dll
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\EntityFramework.dll
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\EntityFramework.SqlServer.dll
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\Microsoft.AI.DependencyCollector.dll
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\Microsoft.AI.Web.dll
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\Microsoft.AI.WindowsServer.dll
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\Microsoft.ApplicationInsights.dll
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\Microsoft.Web.Infrastructure.dll
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\System.Web.Helpers.dll
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\System.Web.Mvc.dll
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\System.Web.Razor.dll
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\System.Web.Webpages.Deployment.dll
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\System.Web.Webpages.dll
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\System.Web.Webpages.Razor.dll
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\AutoMapper.xml
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\EntityFramework.xml
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\EntityFramework.SqlServer.xml
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\Microsoft.AI.DependencyCollector.xml
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\Microsoft.AI.Web.xml
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\Microsoft.AI.WindowsServer.xml
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\Microsoft.ApplicationInsights.xml
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\System.Web.Razor.xml
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\System.Web.Webpages.xml
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\System.Web.Webpages.Deployment.xml
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\System.Web.Webpages.Razor.xml
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\System.Web.Helpers.xml
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\bin\System.Web.Mvc.xml
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\obj\Debug\Statki.csprojResolveAssemblyReference.cache
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\obj\Debug\Statki.dll
+C:\Work\Anna_st\semVI\progi\Statki\Statki\Statki\obj\Debug\Statki.pdb
