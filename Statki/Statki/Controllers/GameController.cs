@@ -20,6 +20,9 @@ namespace Statki.Controllers
         {
             using (var db = new BattleShipContext())
             {
+                if (CheckActualModel(model.IdSession) == false)
+                    return RedirectToAction("Login", "Authentication");
+
                 var viewmodel = new List<MapViewModel>();
                 bool isHit = false;
                 var state =
@@ -28,7 +31,7 @@ namespace Statki.Controllers
                 {
                     db.Fields
                     .Single(x => x.PlayerId == model.IdOpponent && x.X == model.ShotX && x.Y == model.ShotY)
-                    .State=State.Zatopiony;
+                    .State = State.Zatopiony;
                     isHit = true;
                 }
                 if (state.State == State.Puste)
@@ -40,26 +43,27 @@ namespace Statki.Controllers
 
                 db.SaveChanges();
 
-                var players =
-                    db.Players.ToList();
+                var players = db.Players.Where(x => x.SessionId == model.IdSession && (x.Id == model.IdPlayer || x.Id == model.IdOpponent)).ToList();
 
                 foreach (var player in players)
                 {
                     var fields = db.Fields.Where(x => x.PlayerId == player.Id).ToList();
                     var fieldsVieModel = Mapper.Map<IList<Field>, IList<FieldViewModel>>(fields);
-                    viewmodel.Add(new MapViewModel { LengthMap = _x, HighMap = _y, IdOpponent = players.First(x => x.Id != player.Id).Id, NamePlayer = player.Name, IdPlayer = player.Id, Fields = fieldsVieModel });
+                    viewmodel.Add(new MapViewModel { IdSession = player.SessionId, LengthMap = _x, HighMap = _y, IdOpponent = players.First(x => x.Id != player.Id).Id, NamePlayer = player.Name, IdPlayer = player.Id, Fields = fieldsVieModel });
                 }
 
                 foreach (var map in viewmodel)
                 {
-                    if (map.Fields.FirstOrDefault(x=>x.State==ViewModel.State.Statek) == null)
+                    if (map.Fields.FirstOrDefault(x => x.State == ViewModel.State.Statek) == null)
                     {
                         var idWinner = map.IdOpponent;
                         viewmodel.First(x => x.IdPlayer == idWinner).IsWinner = true;
+                        db.Sessions.Single(x => x.Id == map.IdSession).IsOpen = false;
+                        db.SaveChanges();
                         break;
                     }
                 }
-            
+
 
                 if (isHit)
                     viewmodel.First(x => x.IdPlayer == model.IdPlayer).IsGo = true;
@@ -68,15 +72,38 @@ namespace Statki.Controllers
                     viewmodel.First(x => x.IdPlayer == model.IdOpponent).IsGo = true;
                 }
                 ModelState.Clear();
-              
+
                 return View(viewmodel);
             }
         }
 
+        private bool CheckActualModel(int id)
+        {
+            using (var db = new BattleShipContext())
+            {
+                var session = db.Sessions.FirstOrDefault(x => x.Id == id);
+                if (session!=null && session.IsOpen)
+                    return true;
+            }
+            return false;
+        }
 
-        public ActionResult ShowMap()
-        {          
-            CreateMap();
+
+        public ActionResult ShowMap(int? sessionId)
+        {
+            if (sessionId.HasValue==false)
+            {
+                return RedirectToAction("Login", "Authentication");
+            }
+
+            int actualSessionId = (int)sessionId;
+            if (CheckActualSessionId((int)sessionId) == false)
+                CreateSession(out actualSessionId, (int)sessionId);
+
+            if (CreateMap(actualSessionId) == false)
+            {
+                return RedirectToAction("Login", "Authentication");
+            }
             var viewmodel = new List<MapViewModel>();
             using (var db = new BattleShipContext())
             {
@@ -84,7 +111,7 @@ namespace Statki.Controllers
                 {
                     var fields = db.Fields.Where(x => x.PlayerId == player.Id).ToList();
                     var fieldsVieModel = Mapper.Map<IList<Field>, IList<FieldViewModel>>(fields);
-                    viewmodel.Add(new MapViewModel { LengthMap = _x, HighMap = _y, NamePlayer = player.Name, IdPlayer = player.Id, Fields = fieldsVieModel });
+                    viewmodel.Add(new MapViewModel { IdSession = player.SessionId, LengthMap = _x, HighMap = _y, NamePlayer = player.Name, IdPlayer = player.Id, Fields = fieldsVieModel });
                 }
                 viewmodel.First().IdOpponent = viewmodel.Last().IdPlayer;
                 viewmodel.Last().IdOpponent = viewmodel.First().IdPlayer;
@@ -94,16 +121,45 @@ namespace Statki.Controllers
             }
         }
 
-
-        private void CreateMap()
+        private void CreateSession(out int actualSessionId, int oldSessionId)
         {
             using (var db = new BattleShipContext())
             {
-                db.Database.ExecuteSqlCommand("TRUNCATE TABLE [Fields]");
+                var obj = new Session();
+                db.Sessions.Add(obj);
+                db.SaveChanges();
+                var players = db.Players.Where(x => x.SessionId == oldSessionId).ToList();
+                foreach (var player in players)
+                {
+                    db.Players.Add(new Player { Name = player.Name, SessionId = obj.Id });
+                }
+                db.SaveChanges();
+                actualSessionId = obj.Id;
+            }
+        }
+
+        private bool CheckActualSessionId(int sessionId)
+        {
+            using (var db = new BattleShipContext())
+            {
+                var isActualSession = db.Sessions.FirstOrDefault(x => x.Id == sessionId);
+                if (isActualSession != null && isActualSession.IsOpen == false)
+                    return false;
+            }
+            return true;
+        }
+
+
+        private bool CreateMap(int sessionId)
+        {
+            using (var db = new BattleShipContext())
+            {
                 var rnd = new Random(DateTime.Now.Millisecond);
-                var count = db.Players.Count();
-                var players = db.Players.OrderBy(x => x.Id).Skip(count - 2).ToList();
+                var players = db.Players.Where(x => x.SessionId == sessionId).ToList();
                 Players = Mapper.Map<IList<Player>, IList<PlayerViewModel>>(players);
+
+                if (Players.Any() == false)
+                    return false;
                 for (int i = 0; i < 2; i++)
                 {
                     var list = new List<Field>();
@@ -125,6 +181,7 @@ namespace Statki.Controllers
                     db.Fields.AddRange(list);
                     db.SaveChanges();
                 }
+                return true;
             }
         }
 

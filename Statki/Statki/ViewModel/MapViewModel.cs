@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Statki.ViewModel
 {
@@ -12,6 +8,7 @@ namespace Statki.ViewModel
         public string NamePlayer { get; set; }
         public int IdPlayer { get; set; }
         public int IdOpponent { get; set; }
+        public int IdSession { get; set; }
         public bool IsGo  { get; set; }
         public bool IsWinner { get; set; }
         public int ShotX { get; set; }

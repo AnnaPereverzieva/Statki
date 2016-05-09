@@ -21,7 +21,7 @@
                 }
                 else
                 {
-                    <td class="Cell">@(k - 1)</td>
+                    <td class="Axis">@(k - 1)</td>
                 }
             }
         </tr>
@@ -33,7 +33,7 @@
             {
                 if (j == 0)
                 {
-                    <td class="Cell">@i</td>
+                    <td class="Axis">@i</td>
                 }
                 if (Model.Fields.FirstOrDefault(x => x.X == j && x.Y == i && x.State == State.Pudlo) != null)
                 {

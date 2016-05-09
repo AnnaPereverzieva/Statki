@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using Statki.Models;
 
 namespace Statki.Controllers
@@ -12,17 +8,19 @@ namespace Statki.Controllers
         // GET: Authentication
         public ActionResult Login(string name1, string name2)
         {
-            if(string.IsNullOrEmpty(name1)==false && string.IsNullOrEmpty(name1) == false)
+            if (string.IsNullOrEmpty(name1) == false || string.IsNullOrEmpty(name1) == false)
             {
+                var obj = new Session();
                 using (var db = new BattleShipContext())
                 {
-                    db.Database.ExecuteSqlCommand("TRUNCATE TABLE [Players]");
-                    db.Database.ExecuteSqlCommand("TRUNCATE TABLE [Fields]");
-                    db.Players.Add(new Player {Name = name1});
-                    db.Players.Add(new Player { Name = name2 });
+                    obj =new Session();
+                    db.Sessions.Add(obj);
+                    db.SaveChanges();
+                    db.Players.Add(new Player { Name = name1, SessionId = obj.Id });
+                    db.Players.Add(new Player { Name = name2, SessionId = obj.Id });
                     db.SaveChanges();
                 }
-                return RedirectToAction("ShowMap", "Game");
+                return RedirectToAction("ShowMap", "Game", new { sessionId = obj.Id });
             }
             return View();
         }

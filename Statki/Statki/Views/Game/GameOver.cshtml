@@ -14,6 +14,6 @@
     <label class="text-success">@Model.NamePlayer</label>
     <label class="text-success">wygrałes </label>
     <br>
-    @Html.ActionLink("nowa gra", "ShowMap")
+    @Html.ActionLink("nowa gra", "ShowMap", new { sessionId = Model.IdSession})
 </body>
 </html>

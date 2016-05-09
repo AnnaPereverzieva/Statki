@@ -29,7 +29,7 @@
                             }
                             else
                             {
-                                <td class="Cell">@(k - 1)</td>
+                                <td class="Axis">@(k - 1)</td>
                             }
                         }
                     </tr>
@@ -41,7 +41,7 @@
                             {
                                 if (j == 0)
                                 {
-                                    <td class="Cell">@i</td>
+                                    <td class="Axis">@i</td>
                                 }
 
                                 if (Model.First(x => x.IsGo).Fields.FirstOrDefault(x => x.X == j && x.Y == i && x.State == State.Statek) != null)
@@ -62,6 +62,7 @@
                     }
                 </tbody>
             </table>
+            <label class="text">Strzeła:  </label>
             @Html.DisplayFor(model => model.First(y => y.IsGo).NamePlayer)
 
         </div>
@@ -73,6 +74,7 @@
                 <div class="form-inline">
 
                     @Html.HiddenFor(x => x.First(y => y.IsGo).IdPlayer)
+                    @Html.HiddenFor(x => x.First(y => y.IsGo).IdSession)
                     @Html.HiddenFor(x => x.First(y => y.IsGo).NamePlayer, Model.First(y => y.IsGo).NamePlayer)
                     @Html.HiddenFor(x => x.First(y => y.IsGo).IdOpponent, Model.First(y => y.IsGo).IdOpponent)
 
@@ -84,7 +86,7 @@
                     <br>
                     <div class="form-group">
                         <div>
-                            <input type="submit" value="Strzał" class="btn btn-default" />
+                            <input type="submit" value="Strzał" class="Button" />
                         </div>
                     </div>
                 </div>

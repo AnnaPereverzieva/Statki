@@ -9,6 +9,7 @@ namespace Statki.Models
             
         }
         public DbSet<Player> Players { get; set; }
+        public DbSet<Session> Sessions { get; set; }
         public DbSet<Field> Fields { get; set; }
     }
 }
