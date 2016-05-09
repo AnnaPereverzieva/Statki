@@ -1,0 +1,107 @@
+﻿
+@{
+    ViewBag.Title = "ShowMap";
+}
+
+
+@using Statki.ViewModel
+@model List<Statki.ViewModel.MapViewModel>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyTitle</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/Style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-4">
+            <table>
+                <tbody>
+                    <tr>
+                        @for (int k = 0; k < Model.First(x => x.IsGo).LengthMap + 1; k++)
+                        {
+                            if (k == 0)
+                            {
+                                <td class="InvisibleCell"></td>
+                            }
+                            else
+                            {
+                                <td class="Cell">@(k - 1)</td>
+                            }
+                        }
+                    </tr>
+                    @for (int i = 0; i < Model.First(x => x.IsGo).HighMap; i++)
+                    {
+
+                        <tr>
+                            @for (int j = 0; j < Model.First(x => x.IsGo).LengthMap; j++)
+                            {
+                                if (j == 0)
+                                {
+                                    <td class="Cell">@i</td>
+                                }
+
+                                if (Model.First(x => x.IsGo).Fields.FirstOrDefault(x => x.X == j && x.Y == i && x.State == State.Statek) != null)
+                                {
+                                    <td class="ShipCell"></td>
+                                }
+                                else if (Model.First(x => x.IsGo).Fields.FirstOrDefault(x => x.X == j && x.Y == i && x.State == State.Zatopiony) != null)
+                                {
+                                    <td class="Sink">X</td>
+                                }
+                                else
+                                {
+                                    <td class="Cell"></td>
+                                }
+
+                            }
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            @Html.DisplayFor(model => model.First(y => y.IsGo).NamePlayer)
+
+        </div>
+        <div class="col-md-2">
+
+
+            @using (Html.BeginForm("ShowMap", "Game", FormMethod.Post))
+            {
+                <div class="form-inline">
+
+                    @Html.HiddenFor(x => x.First(y => y.IsGo).IdPlayer)
+                    @Html.HiddenFor(x => x.First(y => y.IsGo).NamePlayer, Model.First(y => y.IsGo).NamePlayer)
+                    @Html.HiddenFor(x => x.First(y => y.IsGo).IdOpponent, Model.First(y => y.IsGo).IdOpponent)
+
+                    <label>Poziomo: </label>
+                    @Html.DropDownListFor(x => x.First(y => y.IsGo).ShotX, new SelectList(Enumerable.Range(0, 6)))
+                    <br>
+                    <label>Pionowo: </label>
+                    @Html.DropDownListFor(x => x.First(y => y.IsGo).ShotY, new SelectList(Enumerable.Range(0, 6)))
+                    <br>
+                    <div class="form-group">
+                        <div>
+                            <input type="submit" value="Strzał" class="btn btn-default" />
+                        </div>
+                    </div>
+                </div>
+            }
+            <div>
+                @if (Model.FirstOrDefault(x => x.IsWinner) != null)
+                {
+                    @Html.Partial("GameOver", Model.First(x => x.IsWinner))
+                }
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            @Html.Partial("_PartialMapOpponent", Model.First(x => x.IsGo == false))
+        </div>
+    </div>
+
+
+</body>
+</html>

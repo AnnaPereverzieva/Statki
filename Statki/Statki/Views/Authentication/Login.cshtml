@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+@using (Html.BeginForm("Login", "Authentication", FormMethod.Post))
+{
+    <br>
+    <div class="form-horizontal">
+        <div class="col-md-10">
+            <label>Gracz 1: </label>
+            @Html.TextBox("name1")<br>
+        </div>
+        <div class="col-md-10">
+            <label>Gracz 2: </label>
+            @Html.TextBox("name2")
+        </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Rozpocznij" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+}
+      
+
+
+      
+

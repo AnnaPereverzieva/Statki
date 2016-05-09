@@ -1,0 +1,59 @@
+﻿@using Statki.ViewModel
+@model MapViewModel
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyTitle</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/Style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<table>
+    <tbody>
+        <tr>
+            @for (int k = 0; k < Model.LengthMap + 1; k++)
+            {
+                if (k == 0)
+                {
+                    <td class="InvisibleCell"></td>
+                }
+                else
+                {
+                    <td class="Cell">@(k - 1)</td>
+                }
+            }
+        </tr>
+
+    @for (int i = 0; i < Model.HighMap; i++)
+    {
+        <tr>
+            @for (int j = 0; j < Model.LengthMap; j++)
+            {
+                if (j == 0)
+                {
+                    <td class="Cell">@i</td>
+                }
+                if (Model.Fields.FirstOrDefault(x => x.X == j && x.Y == i && x.State == State.Pudlo) != null)
+                {
+                    <td class="Fail"> . </td>
+                }
+                else if (Model.Fields.FirstOrDefault(x => x.X == j && x.Y == i && x.State == State.Zatopiony) != null)
+                {
+                    <td class="Sink"> X </td>
+                }
+                else
+                {
+                    <td class="Cell"></td>
+                }
+
+            }
+        </tr>
+    }
+    </tbody>
+</table>
+    <label>Przeciwnik: </label>
+   @Html.DisplayFor(model => model.NamePlayer)
+</body>
+</html>

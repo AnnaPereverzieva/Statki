@@ -1,0 +1,42 @@
+﻿body {
+}
+
+td {
+    border: 1px solid black;
+}
+
+.ShipCell {
+    height: 40px;
+    width: 50px;
+    border: 2px solid green;
+}
+
+.Cell {
+    border: 1px solid black;
+    height: 40px;
+    width: 50px;
+}
+
+.Fail {
+    height: 40px;
+    border: 1px solid black;
+    width: 50px;
+    font-size: 25px;
+    text-align: center;
+    vertical-align: top;
+    color: black;
+}
+
+.Sink {
+    border: 1px solid black;
+    height: 40px;
+    width: 50px;
+    font-size: 25px;
+    color: red;
+    text-align: center;
+    vertical-align: middle;
+}
+.InvisibleCell {
+    border: 0;
+    border-color: white;
+}
